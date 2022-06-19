@@ -1,0 +1,52 @@
+:root {
+  --white: #f8f8f8;
+  --black: #0e0e0e;
+  --blue-light: #c2e9fb;
+  --blue-medium: #a1c4fd;
+  --blue-strong: #04133d;
+  --background: linear-gradient(#a1c4fd, #c2e9fb);
+  --background-dark: linear-gradient(#0e0e0e, #0e0e0e);
+  font-size: 62.5%
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--white);
+  color:#29292e;
+  height:100%;
+}
+
+
+
+body, input, button, textarea{
+  font: 400 16px "Poppins", "Roboto", sans-serif;
+
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.darkmode:root {
+  --white: #0e0e0e;
+  --black: #f8f8f8;
+  --blue-light: #c2e9fb;
+  --blue-medium: #a1c4fd;
+  --blue-strong: #0e0e0e;
+  --background: #000;
+  --background-dark: linear-gradient(#0e0e0e, #0e0e0e);
+  font-size: 62.5%
+}

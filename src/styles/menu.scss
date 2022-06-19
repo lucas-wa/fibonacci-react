@@ -1,0 +1,234 @@
+div {
+  position: relative;
+
+  label {
+    #nav-icon3 {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      margin: 10px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    #nav-icon3 span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+    }
+
+    #darkmode:checked~#dark #nav-icon3 span {
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    #nav-icon3 span:nth-child(1) {
+      top: 0px;
+    }
+
+    #nav-icon3 span:nth-child(2),
+    #nav-icon3 span:nth-child(3) {
+      top: 9px;
+    }
+
+    #nav-icon3 span:nth-child(4) {
+      top: 18px;
+    }
+
+    #menu:checked~#nav-icon3 span:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    #menu:checked~#nav-icon3 span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    #menu:checked~#nav-icon3 span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    #menu:checked~#nav-icon3 span:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    .fade {
+      opacity: 0;
+      animation: fadein 1s, float 6s infinite;
+      animation-delay: 1s, 2s;
+      /* animation-iteration-count: unset, infinite; */
+    }
+  }
+
+  .menuNavigation {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px var(--blue-medium) solid;
+    top: 100%;
+    right: 25%;
+    padding: 10px;
+    display: block;
+    z-index: 1;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      // gap: 5px;
+
+
+
+      li#dark-mode {
+        align-self: center;
+
+        label {
+          width: 60px;
+          height: 35px;
+          background-color: var(--blue-medium);
+          border-radius: 20px;
+          cursor: pointer;
+          box-sizing: border-box;
+          padding: 5px;
+          display: block;
+        }
+
+        span {
+          width: 2.4rem;
+          height: 2.4rem;
+          background: var(--white);
+          display: block;
+          border-radius: 15px;
+          position: relative;
+          transition: all ease 0.3s;
+
+          img {
+            filter: brightness(0);
+          }
+
+        }
+
+        // Animação do botão darkmode
+
+
+      }
+
+      li {
+        margin: 6px;
+
+      }
+
+      li a {
+        text-decoration: none;
+        color: #f8f8f8;
+        display: flex;
+        gap: 5px;
+        justify-content: flex-start;
+        align-items: center;
+
+      }
+    }
+
+  }
+
+
+
+
+}
+
+@media only screen and (min-width: 768px) {
+  div {
+    label #nav-icon3 {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    .menuNavigation {
+      position: initial;
+      background: none;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      margin: 0;
+      overflow: initial;
+      clip: none;
+      white-space: none;
+      border-width: none;
+
+
+      ul {
+        flex-direction: row;
+
+        li#dark-mode {
+          margin-right: 15px;
+        }
+
+        li a {
+          filter: brightness(20%);
+          flex-direction: column;
+          gap: 1px;
+          transition: filter .3s;
+          width: 100%;
+
+          &:hover {
+            filter: brightness(60%);
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+// Dark mode button animation
+#darkmode:checked~#home-page #menu #labelDarkmode span {
+  margin-left: 25px;
+}
+
+#darkmode:checked~#home-page #menu li  {
+  .icons, a {
+    filter:brightness(100%);
+  }
+
+  a:hover {
+    filter:brightness(80%);
+  }
+  
+}
