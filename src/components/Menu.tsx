@@ -27,7 +27,7 @@ export function Menu({ handleTheme }: MenuProps) {
 
 
   return (
-    <div id="menu">
+    <div id="menuContent">
       <label id="label-menu" htmlFor="menu">
         <input
           type="checkbox"

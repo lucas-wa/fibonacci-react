@@ -5,25 +5,46 @@ import logo from "../assets/images/logo.png";
 import { Menu } from "../components/Menu";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../contexts/themeContext";
+
+
 
 export function Home() {
 
   let testMain = [];
+  const {theme, setTheme} = useContext(ThemeContext)
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 2; i++) {
     testMain.push(i)
   }
 
   function handleTheme(){
-    const Root = document.querySelector(":root");
-    console.log(Root)
-    Root?.classList.toggle("darkmode")
+    const Root = document.querySelector("#root");
+    
+
+
+    if(theme == `light`){
+      Root?.classList.add(`darkmode`);
+      setTheme(`dark`); 
+      localStorage.setItem(`theme`, `dark`);
+      
+
+    }else{
+      Root?.classList.remove(`darkmode`);
+      setTheme(`light`);
+      localStorage.setItem(`theme`, `light`);
+    } 
+
+
     
   }
 
   return (
     <>
-      <input type="checkbox" name="darkmode" id="darkmode" className="sr-only" />
+        <input checked = {
+          !(theme == `light`)
+        } type="checkbox" name="darkmode" id="darkmode" className="sr-only" />
 
       <div id="home-page">
         <header>

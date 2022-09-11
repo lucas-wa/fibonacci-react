@@ -218,11 +218,11 @@ div {
 }
 
 // Dark mode button animation
-#darkmode:checked~#home-page #menu #labelDarkmode span {
+#darkmode:checked~#home-page #menuContent #labelDarkmode span {
   margin-left: 25px;
 }
 
-#darkmode:checked~#home-page #menu li  {
+#darkmode:checked~#home-page #menuContent li  {
   .icons, a {
     filter:brightness(100%);
   }

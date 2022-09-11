@@ -1,4 +1,9 @@
 :root {
+  font-size: 62.5%
+
+}
+
+#root {
   --white: #f8f8f8;
   --black: #0e0e0e;
   --blue-light: #c2e9fb;
@@ -6,7 +11,6 @@
   --blue-strong: #04133d;
   --background: linear-gradient(#a1c4fd, #c2e9fb);
   --background-dark: linear-gradient(#0e0e0e, #0e0e0e);
-  font-size: 62.5%
 }
 
 *{
@@ -40,7 +44,7 @@ body, input, button, textarea{
   border-width: 0;
 }
 
-.darkmode:root {
+.darkmode#root {
   --white: #0e0e0e;
   --black: #f8f8f8;
   --blue-light: #c2e9fb;
@@ -48,5 +52,4 @@ body, input, button, textarea{
   --blue-strong: #0e0e0e;
   --background: #000;
   --background-dark: linear-gradient(#0e0e0e, #0e0e0e);
-  font-size: 62.5%
 }
