@@ -37,9 +37,7 @@ div {
       transition: 0.25s ease-in-out;
     }
 
-    #darkmode:checked~#dark #nav-icon3 span {
-      background: rgba(255, 255, 255, 0.7);
-    }
+   
 
     #nav-icon3 span:nth-child(1) {
       top: 0px;
@@ -215,6 +213,11 @@ div {
 
     }
   }
+}
+
+
+#darkmode:checked~#home-page #menuContent #label-menu #nav-icon3 span {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 // Dark mode button animation
