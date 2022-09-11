@@ -31,16 +31,13 @@
 ## Página Atual!
 
 <h3>Responsividade</h3>
-<div style="width:100%; 
-            display:flex; 
-            justify-content:flex-start; 
-            flex-direction:column;">
-  <img src="https://user-images.githubusercontent.com/72520736/189509465-03743c3f-3541-4ae6-834f-a80202dfbc21.png" width="750rem"/>
-  <img src="https://user-images.githubusercontent.com/72520736/189509509-a2824457-52ea-484b-9128-1080a524df7f.png" height="750rem"/>
+<div style="display:flex;">
+<img src="https://user-images.githubusercontent.com/72520736/189509465-03743c3f-3541-4ae6-834f-a80202dfbc21.png" width="500rem"/>
+<img src="https://user-images.githubusercontent.com/72520736/189509509-a2824457-52ea-484b-9128-1080a524df7f.png" height="700rem"/>
 </div>
 
 <h3>Modo escuro</h3>
- <img src="https://user-images.githubusercontent.com/72520736/189510104-58696e08-175d-4dca-9c99-438297a0a9d5.png" height="750rem"/>
+<img src="https://user-images.githubusercontent.com/72520736/189510104-58696e08-175d-4dca-9c99-438297a0a9d5.png" width="100%"/>
  
  <h3>Mobile menu</h3>
  <div style="display:flex;">
