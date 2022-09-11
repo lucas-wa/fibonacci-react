@@ -32,7 +32,7 @@
 
 <h3>Responsividade</h3>
 <div style="display:flex;">
-<img src="https://user-images.githubusercontent.com/72520736/189509465-03743c3f-3541-4ae6-834f-a80202dfbc21.png" width="500rem"/>
+<img src="https://user-images.githubusercontent.com/72520736/189509465-03743c3f-3541-4ae6-834f-a80202dfbc21.png" width="600rem"/>
 <img src="https://user-images.githubusercontent.com/72520736/189509509-a2824457-52ea-484b-9128-1080a524df7f.png" height="700rem"/>
 </div>
 
