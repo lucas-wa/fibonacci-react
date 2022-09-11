@@ -44,4 +44,31 @@
  <img src="https://user-images.githubusercontent.com/72520736/189510375-a21d27d7-3f5b-4db5-a507-1db643270080.png" width="400rem"/>
  <img src="https://user-images.githubusercontent.com/72520736/189510376-7736da1f-37b5-4771-9a64-77724ee9a4b1.png" width="400rem""/>
  </div>
+ 
+ 
+ ## Como rodar o projeto
+ - Clone o projeto:
+ 
+ ```
+ git clone
+ ```
+ 
+ - Instale as dependências
+ 
+ ```
+ npm install
+ ```
+ 
+ - Rode o projeto
+ 
+ ```
+ npm run dev
+ ```
+ 
+ - Abra seu navegador e digite "localhost:xxxx", sendo "xxxx" a porta informada pelo builder
+ 
+ ## Deploy
+ [Projeto Fibonacci](https://fibonacci-react.vercel.app/)
+ 
+
 
