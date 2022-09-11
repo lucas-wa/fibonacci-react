@@ -1,9 +1,13 @@
-import { createContext } from "react";
+import React, { createContext } from "react";
 
-// type ThemeContextType = {
-//     theme : string,
-//     setTheme : () => void;
 
-// }
+interface ThemeContextType {
+    theme : string | null,
+    setTheme : React.Dispatch<React.SetStateAction<string | null>>
 
-export const ThemeContext = createContext('light')
+}
+
+export const ThemeContext = createContext<ThemeContextType>({
+    theme: "light",
+    setTheme: () => {}
+})
