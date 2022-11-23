@@ -5,12 +5,14 @@ import logo from "../assets/images/logo.png";
 import { Menu } from "../components/Menu";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../contexts/themeContext";
-
+import {api} from "../lib/api"
 
 
 export function Home() {
+
+  const [user, setUser] = useState({});
 
   let testMain = [];
   const {theme, setTheme} = useContext(ThemeContext)
@@ -39,6 +41,7 @@ export function Home() {
 
     
   }
+
 
   return (
     <>
@@ -96,6 +99,8 @@ export function Home() {
         </main>
 
         <Footer />
+
+
       </div>
     </>
 
