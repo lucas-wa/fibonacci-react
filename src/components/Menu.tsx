@@ -7,6 +7,7 @@ import logout from "../assets/images/logout.svg";
 import sign from "../assets/images/sign.svg";
 import "../styles/menu.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface MenuProps {
   handleTheme: () => void;
@@ -59,23 +60,22 @@ export function Menu({ handleTheme }: MenuProps) {
           </li>
 
           <li>
-            <a href="#">
+            <Link to="/">
               <img src={home} alt="Home" className="icons" />
               <span>Início</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/about">
               <img src={light} alt="light" className="icons" />
-
               <span>Projeto</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/contacts">
               <img src={contact} alt="contact" className="icons" />
               <span>Contato</span>
-            </a>
+            </Link>
           </li>
 
           {
