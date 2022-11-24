@@ -2,7 +2,7 @@ import "../styles/home.scss";
 
 import { Footer } from "../components/Footer";
 import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "../contexts/themeContext";
+import { Contexts } from "../contexts/Contexts";
 import {api} from "../lib/api"
 import { Header } from "../components/Header";
 import { HomeMain } from "../components/HomeMain";
@@ -12,13 +12,19 @@ export function Home() {
 
   const [user, setUser] = useState({});
 
-  const {theme, setTheme} = useContext(ThemeContext)
+  const {theme, setTheme} = useContext(Contexts);
+
 
   return (
     <>
-        <input checked = {
+        <input 
+        checked = {
           !(theme == `light`)
-        } type="checkbox" name="darkmode" id="darkmode" className="sr-only" />
+        } 
+        type="checkbox" 
+        name="darkmode" 
+        id="darkmode" 
+        className="sr-only" />
 
       <div id="home-page">
  

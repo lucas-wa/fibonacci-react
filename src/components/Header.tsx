@@ -5,11 +5,11 @@ import logo from "../assets/images/logo.png";
 import { Menu } from "../components/Menu";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "../contexts/themeContext";
+import { Contexts } from "../contexts/Contexts";
 
 export function Header (){
 
-    const {theme, setTheme} = useContext(ThemeContext)
+    const {theme, setTheme} = useContext(Contexts)
 
     function handleTheme(){
         const Root = document.querySelector("#root");

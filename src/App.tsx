@@ -1,8 +1,8 @@
 import { Home } from "./pages/Home"
 import {About} from "./pages/About"
 import "./styles/global.scss"
-import {ThemeContext} from "./contexts/themeContext"
-import { useState } from "react"
+import {Contexts} from "./contexts/Contexts"
+import { useContext, useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom";
 import { Contacts } from "./pages/Contacts"
 
@@ -13,25 +13,28 @@ function App() {
 
 
   const [theme, setTheme] = useState(
-    localStorage.getItem(`theme`) 
+    localStorage.getItem("theme")
     ?
-    localStorage.getItem(`theme`)
+    localStorage.getItem("theme")
     :
     "light"
   );
 
+  const [user, setUser] = useState({});
+
+  
+    
   if(theme == `dark`) document.querySelector("#root")?.classList.add(`darkmode`)
 
 
-
   return (
-   <ThemeContext.Provider value={{theme, setTheme}}>
+   <Contexts.Provider value={{theme, setTheme, user, setUser}}>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contacts" element={<Contacts/>} />
       </Routes>
-    </ThemeContext.Provider>
+    </Contexts.Provider>
   )
 }
 
