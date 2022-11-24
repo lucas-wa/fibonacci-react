@@ -2,7 +2,7 @@ import { Home } from "./pages/Home"
 import {About} from "./pages/About"
 import "./styles/global.scss"
 import {Contexts} from "./contexts/Contexts"
-import { useContext, useEffect, useState } from "react"
+import { useState } from "react"
 import { Route, Routes } from "react-router-dom";
 import { Contacts } from "./pages/Contacts"
 
