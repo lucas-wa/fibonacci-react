@@ -1,0 +1,58 @@
+.SignPageContainer {
+    display: flex;
+        flex-direction: column;
+    //height: 100%;
+    background: var(--background);
+
+
+    .modal-wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .modal {
+            width: 50%;
+            //max-width: 500px;
+            height: fit-content;
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px;
+    
+            form {
+                padding: 20px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+    
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    gap: 5px;
+                    line-height: 0;
+    
+                    input {
+                        width: 50%;
+                        background: inherit;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid var(--black);
+                        padding: 5px;
+                    }
+                }
+    
+            }
+        }
+    }
+
+}
+

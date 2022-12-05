@@ -1,11 +1,11 @@
-import "../styles/home.scss";
+import "../../styles/home.scss";
 
-import { Footer } from "../components/Footer";
+import { Footer } from "../../components/Footer";
 import { useContext, useEffect, useState } from "react";
-import { Contexts } from "../contexts/Contexts";
-import {api} from "../lib/api"
-import { Header } from "../components/Header";
-import {AboutMain} from "../components/AboutMain"
+import { Contexts } from "../../contexts/Contexts";
+import {api} from "../../lib/api"
+import { Header } from "../../components/Header";
+import {AboutMain} from "../../components/AboutMain"
 
 
 export function About() {
@@ -28,7 +28,7 @@ export function About() {
           !(theme == `light`)
         } type="checkbox" name="darkmode" id="darkmode" className="sr-only" />
 
-      <div id="home-page">
+      <div className="AboutContainer">
  
         <Header/>
 

@@ -1,11 +1,11 @@
-import home from "../assets/images/home.svg";
-import light from "../assets/images/light.svg";
-import contact from "../assets/images/contact.svg";
-import darkmodeButton from "../assets/images/darkmode_light.svg";
-import login from "../assets/images/login.svg";
-import logout from "../assets/images/logout.svg";
-import sign from "../assets/images/sign.svg";
-import "../styles/menu.scss";
+import home from "../../assets/images/home.svg";
+import light from "../../assets/images/light.svg";
+import contact from "../../assets/images/contact.svg";
+import darkmodeButton from "../../assets/images/darkmode_light.svg";
+import login from "../../assets/images/login.svg";
+import logout from "../../assets/images/logout.svg";
+import sign from "../../assets/images/sign.svg";
+import "../../styles/menu.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -92,7 +92,7 @@ export function Menu({ handleTheme }: MenuProps) {
 
               (<>
                 <li>
-                  <a href="#">
+                  <a href="/sign">
                     <img src={sign} alt="contact" className="icons" />
                     <span>Cadastrar</span>
                   </a>

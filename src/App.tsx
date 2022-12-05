@@ -5,6 +5,7 @@ import {Contexts} from "./contexts/Contexts"
 import { useState } from "react"
 import { Route, Routes } from "react-router-dom";
 import { Contacts } from "./pages/Contacts"
+import { SignPage } from "./pages/SignPage"
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contacts" element={<Contacts/>} />
+        <Route path="/sign" element={<SignPage/>} />
       </Routes>
     </Contexts.Provider>
   )

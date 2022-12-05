@@ -1,11 +1,11 @@
-import "../styles/home.scss";
+import "./style.scss";
 
-import { Footer } from "../components/Footer";
+import { Footer } from "../../components/Footer";
 import { useContext, useEffect, useState } from "react";
-import { Contexts } from "../contexts/Contexts";
-import {api} from "../lib/api"
-import { Header } from "../components/Header";
-import { HomeMain } from "../components/HomeMain";
+import { Contexts } from "../../contexts/Contexts";
+import {api} from "../../lib/api"
+import { Header } from "../../components/Header";
+import { HomeMain } from "../../components/HomeMain";
 
 
 export function Home() {
@@ -16,7 +16,7 @@ export function Home() {
 
 
   return (
-    <>
+    <div className="HomeConteiner">
         <input 
         checked = {
           !(theme == `light`)
@@ -36,7 +36,7 @@ export function Home() {
 
 
       </div>
-    </>
+    </div>
 
   );
 }

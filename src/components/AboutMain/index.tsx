@@ -1,19 +1,24 @@
-export function HomeMain(){
+import "./style.scss";
 
-    let testMain = [];
-  
-    for (let i = 0; i < 2; i++) {
-      testMain.push(i)
-    }
-  
 
-    return (
-        <main>
+export function AboutMain() {
+
+  let testMain = [];
+
+  for (let i = 0; i < 2; i++) {
+    testMain.push(i)
+  }
+
+
+  return (
+    <div className="AboutMain">
+
+      <main>
         {
           testMain.map(
             element => (
               <section key={element}>
-                <h2>A ideia</h2>
+                <h2>Sobre</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet pariatur commodi porro ut. Nihil necessitatibus aliquid fugiat cupiditate illo cum praesentium corrupti, quibusdam alias quae consectetur, vero ea iusto mollitia.
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
@@ -27,5 +32,7 @@ export function HomeMain(){
         }
 
       </main>
-    )
+    </div>
+
+  )
 }

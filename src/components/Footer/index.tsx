@@ -1,10 +1,10 @@
-import "../styles/footer.scss";
+import "../../styles/footer.scss";
 
-import facebook from "../assets/images/facebook.svg";
-import github from "../assets/images/github.svg";
-import linkedin from "../assets/images/linkedin.svg";
-import youtube from "../assets/images/youtube.svg";
-import instagram from "../assets/images/instagram.svg";
+import facebook from "../../assets/images/facebook.svg";
+import github from "../../assets/images/github.svg";
+import linkedin from "../../assets/images/linkedin.svg";
+import youtube from "../../assets/images/youtube.svg";
+import instagram from "../../assets/images/instagram.svg";
 
 export function Footer() {
   return (
