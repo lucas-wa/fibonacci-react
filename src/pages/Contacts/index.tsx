@@ -1,3 +1,4 @@
+import "./style.scss"
 
 import { Footer } from "../../components/Footer";
 import { useContext, useEffect, useState } from "react";
@@ -27,7 +28,7 @@ export function Contacts() {
           !(theme == `light`)
         } type="checkbox" name="darkmode" id="darkmode" className="sr-only" />
 
-      <div id="home-page">
+      <div className="ContactsContainer">
  
         <Header/>
 

@@ -1,5 +1,4 @@
-import "../../styles/home.scss";
-
+import "./style.scss"
 import { Footer } from "../../components/Footer";
 import { useContext, useEffect, useState } from "react";
 import { Contexts } from "../../contexts/Contexts";

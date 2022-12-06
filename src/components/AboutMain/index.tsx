@@ -11,9 +11,8 @@ export function AboutMain() {
 
 
   return (
-    <div className="AboutMain">
 
-      <main>
+      <main className="AboutMain">
         {
           testMain.map(
             element => (
@@ -32,7 +31,6 @@ export function AboutMain() {
         }
 
       </main>
-    </div>
 
   )
 }

@@ -1,3 +1,5 @@
+import "./style.scss";
+
 export function ContactsMain(){
 
     let testMain = [];
@@ -8,7 +10,7 @@ export function ContactsMain(){
   
 
     return (
-        <main>
+        <main className="ContactsMain">
         {
           testMain.map(
             element => (
