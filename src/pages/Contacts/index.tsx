@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { Contexts } from "../../contexts/Contexts";
 import {api} from "../../lib/api"
 import { Header } from "../../components/Header";
-import {ContactsMain} from "../../components/Contacs"
+import {ContactsMain} from "../../components/ContactsMain"
 
 
 export function Contacts() {

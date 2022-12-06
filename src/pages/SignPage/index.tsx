@@ -5,21 +5,42 @@ import '../../styles/signpage.scss';
 
 export function SignPage() {
 
-    useEffect(() => {
-        const container = document.querySelector(".SignPageContainer");
-        const height = window.screen.height;
 
-        //console.log(height);
-        console.log(container?.clientHeight);
+    const fullHeightStyle = {
+        height: "100vh"
+    }
 
-        if (Number(container?.clientHeight) < height) {
-            container.style.height = "100vh"
-        }
-    }, [])
+    // useEffect(() => {
+    //     const container = document.querySelector(".SignPageContainer");
+    //     const height = window.screen.height;
+
+    //     //console.log(height);
+    //     console.log(container);
+
+    //     if (Number(container?.clientHeight) < height) {
+    //         container.style.height = "100vh"
+    //     }
+    // }, [])
 
     return (
 
-        <div className="SignPageContainer">
+        <div className="SignPageContainer" style={
+            document
+            .querySelector(".SignPageContainer")
+            ?.clientHeight
+
+            <
+
+            window.screen.height 
+
+            ?
+
+            fullHeightStyle
+
+            :
+
+            {}
+        }>
 
 
             <div className="modal-wrapper">
