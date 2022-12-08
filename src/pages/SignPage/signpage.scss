@@ -1,21 +1,42 @@
 .SignPageContainer {
     display: flex;
-        flex-direction: column;
-    //height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    // flex-direction: column;
+    height: 100vh;
     background: var(--background);
+    gap:100px;
 
+
+    .image {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+
+        img {
+            transform: rotate(0);
+            animation-name: galaxyRotate;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+    }
 
     .modal-wrapper {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        background: var(--white);
+        flex:1;
+
     
         .modal {
-            width: 50%;
+            width: 80%;
             //max-width: 500px;
             height: fit-content;
-            background: var(--white);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -30,19 +51,21 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 10px;
+                gap: 25px;
     
                 span {
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    justify-content: space-between;
+                    // justify-content: space-between;
                     width: 100%;
-                    gap: 5px;
+                    gap: 20px;
                     line-height: 0;
     
                     input {
-                        width: 50%;
-                        background: inherit;
+                        width: 80%;
+                        background: #FEFEFE;
+                        border-radius: 5PX;
                         outline: none;
                         border: none;
                         border-bottom: 1px solid var(--black);
@@ -56,3 +79,29 @@
 
 }
 
+@keyframes galaxyFloat {
+    0%{
+        transform: translateY(50px);
+    }
+
+    50%{
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(50px);
+
+    }
+}
+
+@keyframes galaxyRotate {
+    0%{
+        transform: rotate(0);
+    }
+
+
+    100% {
+        transform: rotate(360deg);
+
+    }
+}

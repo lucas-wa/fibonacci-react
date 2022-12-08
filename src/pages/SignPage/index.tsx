@@ -1,14 +1,11 @@
 import { useEffect } from 'react';
 import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
-import '../../styles/signpage.scss';
+import './signpage.scss';
+import galaxy from "../../assets/images/galaxy.svg";
 
 export function SignPage() {
 
-
-    const fullHeightStyle = {
-        height: "100vh"
-    }
 
     // useEffect(() => {
     //     const container = document.querySelector(".SignPageContainer");
@@ -24,24 +21,11 @@ export function SignPage() {
 
     return (
 
-        <div className="SignPageContainer" style={
-            document
-            .querySelector(".SignPageContainer")
-            ?.clientHeight
+        <div className="SignPageContainer">
 
-            <
-
-            window.screen.height 
-
-            ?
-
-            fullHeightStyle
-
-            :
-
-            {}
-        }>
-
+            <div className="image">
+                <img src={galaxy} alt="galaxy" />
+            </div>
 
             <div className="modal-wrapper">
                 <div className="modal">
