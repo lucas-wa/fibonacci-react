@@ -20,7 +20,14 @@ export function Contacts() {
   }
 
 
+  useEffect(() => {
+    const container:any = document.querySelector(".ContactsContainer")
 
+    if (container?.clientHeight < window.screen.height) {
+      container.style.height = "100vh"
+    }
+
+  }, [])
 
   return (
     <>

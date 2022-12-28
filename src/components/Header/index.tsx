@@ -35,7 +35,16 @@ export function Header (){
         <div className="line">
           {/* <Link to={"#"}> */}
           <figure>
-            <img src={logo} alt="Fibonacci" />
+            <img src={logo} alt="Fibonacci" style={
+              theme == "dark"
+              ?
+              {
+                filter: "brightness(100%)"
+              }
+              :
+              {}
+            }
+            />
             <figcaption hidden>Logo Fibonacci</figcaption>
           </figure>
           {/* </Link> */}

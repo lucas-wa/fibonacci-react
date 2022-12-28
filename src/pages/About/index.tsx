@@ -9,7 +9,7 @@ import {AboutMain} from "../../components/AboutMain"
 
 export function About() {
 
-  const [user, setUser] = useState({});
+
 
   let testMain = [];
   const {theme, setTheme} = useContext(Contexts)
@@ -19,7 +19,14 @@ export function About() {
   }
 
 
+  useEffect(() => {
+    const container:any = document.querySelector(".AboutContainer")
 
+    if (container?.clientHeight < window.screen.height) {
+      container.style.height = "100vh"
+    }
+
+  }, [])
 
   return (
     <>

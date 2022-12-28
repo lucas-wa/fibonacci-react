@@ -221,7 +221,7 @@ div {
 }
 
 // Dark mode button animation
-#darkmode:checked~#home-page #menuContent #labelDarkmode span {
+#darkmode:checked~#home-page #menuContent #labelDarkmode span, {
   margin-left: 25px;
 }
 

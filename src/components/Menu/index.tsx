@@ -5,9 +5,10 @@ import darkmodeButton from "../../assets/images/darkmode_light.svg";
 import login from "../../assets/images/login.svg";
 import logout from "../../assets/images/logout.svg";
 import sign from "../../assets/images/sign.svg";
-import "../../styles/menu.scss";
-import { useState } from "react";
+import "./style.scss";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Contexts } from "../../contexts/Contexts";
 
 interface MenuProps {
   handleTheme: () => void;
@@ -16,6 +17,40 @@ interface MenuProps {
 export function Menu({ handleTheme }: MenuProps) {
 
   const [user, setUser] = useState(undefined);
+
+  const { theme, setTheme } = useContext(Contexts)
+
+  useEffect(() => {
+    const button: any = document.querySelector("#menuContent #labelDarkmode span")
+    const spans: any = document.querySelectorAll("#menuContent #label-menu #nav-icon3 span")
+    const lis: any = document.querySelectorAll("#menuContent li .icons, #menuContent li a")
+
+    if (theme == "dark") {
+      button.style.marginLeft = "25px"
+
+      for(let span of spans){
+        span.style.backgroundColor = "rgba(255, 255, 255, 0.7)"
+      }
+
+      for(let li of lis){
+        li.style.filter = "brightness(100%)"
+      }
+
+      
+
+    } else {
+      button.style.marginLeft = "0"
+
+      for(let span of spans){
+        span.style.backgroundColor = "rgba(0, 0, 0, 0.7)"
+      }
+
+      for(let li of lis){
+        li.style.filter = "brightness(20%)"
+      }
+
+    }
+  }, [theme])
 
 
 

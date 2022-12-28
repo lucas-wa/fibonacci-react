@@ -1,4 +1,4 @@
-import "../../styles/footer.scss";
+import "./style.scss";
 
 import facebook from "../../assets/images/facebook.svg";
 import github from "../../assets/images/github.svg";
