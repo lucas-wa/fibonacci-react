@@ -1,0 +1,102 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    .image {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    
+        img {
+            width: 80%;
+            transform: rotate(0);
+            animation-name: galaxyRotate;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+    }
+    
+    .modal-wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--white);
+        flex:1;
+    
+    
+        .modal {
+            width: 80%;
+            //max-width: 500px;
+            height: fit-content;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px;
+    
+            form {
+                padding: 20px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 25px;
+    
+                span {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    // justify-content: space-between;
+                    width: 100%;
+                    gap: 20px;
+                    line-height: 0;
+    
+                    input {
+                        width: 80%;
+                        background: #FEFEFE;
+                        border-radius: 5PX;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid var(--black);
+                        padding: 5px;
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+@keyframes galaxyFloat {
+    0%{
+        transform: translateY(50px);
+    }
+
+    50%{
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(50px);
+
+    }
+}
+
+@keyframes galaxyRotate {
+    0%{
+        transform: rotate(0);
+    }
+
+
+    100% {
+        transform: rotate(360deg);
+
+    }
+}
+

@@ -127,10 +127,10 @@ export function Menu({ handleTheme }: MenuProps) {
 
               (<>
                 <li>
-                  <a href="/sign">
+                  <Link to="/sign">
                     <img src={sign} alt="contact" className="icons" />
                     <span>Cadastrar</span>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
