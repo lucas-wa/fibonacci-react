@@ -34,11 +34,11 @@ export function SignMain() {
                     
                     <h1>Cadastro</h1>
                     
-                        <input type="text" name="" id="user" placeholder='Digite seu usuário' />
+                        <input type="text" name="" id="user" placeholder='Crie um usuário' />
 
                         <input type="email" name="" id="email" placeholder='Digite seu email' />
 
-                        <input type="password" name="" id="password" placeholder='Digite sua senha' />
+                        <input type="password" name="" id="password" placeholder='Crie uma senha' />
 
                         <button type="submit">Cadastrar</button>
                     </form>

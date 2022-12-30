@@ -3,20 +3,21 @@
 
 
   main {
-    background: rgba(0,0,0, .2);
+    background: rgba(0, 0, 0, .2);
     color: var(--black);
     text-align: center;
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:10px;
+    gap: 10px;
+
     section {
       text-align: left;
       max-width: 90%;
       margin: 4.5rem 0;
 
-      p{
+      p {
         margin-top: 3rem;
       }
     }
@@ -33,9 +34,9 @@
     justify-content: center;
     align-content: center;
     padding-top: 12rem;
-    box-shadow: 0px 2px 1px var(--black);  
-  
-    
+    box-shadow: 0px 2px 1px var(--black);
+
+
     .introductionText {
       width: 50%;
       min-width: 300px;
@@ -49,19 +50,20 @@
       color: var(--black);
       transition: all 1s;
     }
-  
-    img{
+
+    img {
       width: 25%;
       max-width: 40rem;
       min-width: 15rem;
+      animation: appear 2s, floating 4s ease infinite;
     }
-  
+
     button {
       width: 50%;
       max-width: 200px;
-      height:3rem;
-      background:var(--blue-medium);
-      border:none;
+      height: 3rem;
+      background: var(--blue-medium);
+      border: none;
       outline: none;
       border-radius: 6px;
       cursor: pointer;
@@ -69,20 +71,42 @@
   }
 
 
-  @media only screen and (min-width: 768px){
-  
-    .introduction{
+  @media only screen and (min-width: 768px) {
+
+    .introduction {
       padding-top: 0;
     }
-  
+
   }
 
 
-  #darkmode:checked ~ #home-page .introductionText button {
+  #darkmode:checked~#home-page .introductionText button {
     background-color: #04133d;
-    color:#f8f8f8;
+    color: #f8f8f8;
   }
 }
 
+@keyframes floating {
+  0% {
+    transform: translateY(1.5rem);
+  }
 
-  
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(1.5rem);
+
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}

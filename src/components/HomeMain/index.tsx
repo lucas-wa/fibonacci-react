@@ -28,6 +28,7 @@ export function HomeMain() {
 
         <img src={illustration} alt="illustration" />
       </div>
+      
       <main>
         {
           testMain.map(

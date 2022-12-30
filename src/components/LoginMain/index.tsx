@@ -32,7 +32,7 @@ export function LoginMain() {
 
                     <form action="#">
                     
-                    <h1>Cadastro</h1>
+                    <h1>Entrar</h1>
                     
                         <input type="text" name="" id="user" placeholder='Digite seu usuário' />
 
