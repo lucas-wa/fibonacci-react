@@ -80,7 +80,10 @@ main {
 
                     &:focus {
                         padding: 6px;
+                        background-color: inherit;
                     }
+
+                    
                 }
 
                 button {
