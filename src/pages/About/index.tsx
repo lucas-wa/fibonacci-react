@@ -5,10 +5,13 @@ import { Contexts } from "../../contexts/Contexts";
 import {api} from "../../lib/api"
 import { Header } from "../../components/Header";
 import {AboutMain} from "../../components/AboutMain"
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 
 export function About() {
 
+
+  // const [width, height] = useWindowSize();
 
 
   let testMain = [];
@@ -34,7 +37,7 @@ export function About() {
           !(theme == `light`)
         } type="checkbox" name="darkmode" id="darkmode" className="sr-only" />
 
-      <div className="AboutContainer">
+      <div className="AboutContainer" >
  
         <Header/>
 

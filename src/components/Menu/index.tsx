@@ -20,37 +20,39 @@ export function Menu({ handleTheme }: MenuProps) {
 
   const { theme, setTheme } = useContext(Contexts)
 
-  useEffect(() => {
-    const button: any = document.querySelector("#menuContent #labelDarkmode span")
-    const spans: any = document.querySelectorAll("#menuContent #label-menu #nav-icon3 span")
-    const lis: any = document.querySelectorAll("#menuContent li .icons, #menuContent li a")
 
-    if (theme == "dark") {
-      button.style.marginLeft = "25px"
 
-      for(let span of spans){
-        span.style.backgroundColor = "rgba(255, 255, 255, 0.7)"
-      }
+  // useEffect(() => {
+  //   const button: any = document.querySelector("#menuContent #labelDarkmode span")
+  //   const spans: any = document.querySelectorAll("#menuContent #label-menu #nav-icon3 span")
+  //   const lis: any = document.querySelectorAll("#menuContent li .icons, #menuContent li a")
 
-      for(let li of lis){
-        li.style.filter = "brightness(100%)"
-      }
+  //   if (theme == "dark") {
+  //     button.style.marginLeft = "25px"
+
+  //     for(let span of spans){
+  //       span.style.backgroundColor = "rgba(255, 255, 255, 0.7)"
+  //     }
+
+  //     for(let li of lis){
+  //       li.style.filter = "brightness(100%)"
+  //     }
 
       
 
-    } else {
-      button.style.marginLeft = "0"
+  //   } else {
+  //     button.style.marginLeft = "0"
 
-      for(let span of spans){
-        span.style.backgroundColor = "rgba(0, 0, 0, 0.7)"
-      }
+  //     for(let span of spans){
+  //       span.style.backgroundColor = "rgba(0, 0, 0, 0.7)"
+  //     }
 
-      for(let li of lis){
-        li.style.filter = "brightness(20%)"
-      }
+  //     // for(let li of lis){
+  //     //   li.style.filter = "brightness(100%)"
+  //     // }
 
-    }
-  }, [theme])
+  //   }
+  // }, [theme])
 
 
 
@@ -117,10 +119,10 @@ export function Menu({ handleTheme }: MenuProps) {
             user ?
               (
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     <img src={logout} alt="contact" className="icons" />
                     <span>Logout</span>
-                  </a>
+                  </Link>
                 </li>
               )
               :
@@ -134,10 +136,10 @@ export function Menu({ handleTheme }: MenuProps) {
                 </li>
 
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     <img src={login} alt="contact" className="icons" />
                     <span>Logar</span>
-                  </a>
+                  </Link>
                 </li>
               </>
               )

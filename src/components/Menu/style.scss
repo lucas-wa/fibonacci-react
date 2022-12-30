@@ -216,16 +216,17 @@ div {
 }
 
 
-#darkmode:checked~#home-page #menuContent #label-menu #nav-icon3 span {
+#darkmode:checked~div #menuContent #label-menu #nav-icon3 span
+ {
   background: rgba(255, 255, 255, 0.7);
 }
 
 // Dark mode button animation
-#darkmode:checked~#home-page #menuContent #labelDarkmode span, {
+#darkmode:checked~div #menuContent #labelDarkmode span, {
   margin-left: 25px;
 }
 
-#darkmode:checked~#home-page #menuContent li  {
+#darkmode:checked~div #menuContent li  {
   .icons, a {
     filter:brightness(100%);
   }

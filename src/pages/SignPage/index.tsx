@@ -9,14 +9,14 @@ export function SignPage() {
     const {theme, setTheme} = useContext(Contexts);
 
 
-    useEffect(() => {
-        const container:any = document.querySelector(".SignPageContainer")
+    // useEffect(() => {
+    //     const container:any = document.querySelector(".SignPageContainer")
     
-        if (container?.clientHeight < window.screen.height) {
-          container.style.height = "100vh"
-        }
+    //     if (container?.clientHeight < window.screen.height) {
+    //       container.style.height = "100vh"
+    //     }
     
-      }, [])
+    //   }, [])
 
 
     return (

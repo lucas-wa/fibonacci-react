@@ -33,8 +33,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
-        <Route path="/sign" element={<SignPage/>} />
         <Route path="/contacts" element={<Contacts/>} />
+        <Route path="/sign" element={<SignPage/>} />
       </Routes>
     </Contexts.Provider>
   )
