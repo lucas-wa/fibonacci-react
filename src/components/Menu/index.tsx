@@ -136,9 +136,9 @@ export function Menu({ handleTheme }: MenuProps) {
                 </li>
 
                 <li>
-                  <Link to="#">
+                  <Link to="/login">
                     <img src={login} alt="contact" className="icons" />
-                    <span>Logar</span>
+                    <span>Entrar</span>
                   </Link>
                 </li>
               </>
