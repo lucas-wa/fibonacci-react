@@ -2,7 +2,7 @@ import { Home } from "./pages/Home"
 import {About} from "./pages/About"
 import "./styles/global.scss"
 import {Contexts} from "./contexts/Contexts"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom";
 import { Contacts } from "./pages/Contacts"
 import { SignPage } from "./pages/SignPage"
@@ -12,6 +12,8 @@ import { SignPage } from "./pages/SignPage"
 
 function App() {
 
+
+  useEffect(()=>console.log(document.querySelector(":root")),[])
 
   const [theme, setTheme] = useState(
     localStorage.getItem("theme")

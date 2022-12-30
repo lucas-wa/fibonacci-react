@@ -2,83 +2,152 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex:1;
+    flex: 1;
+    color: var(--black);
+
     .image {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-    
-        img {
-            width: 80%;
-            transform: rotate(0);
-            animation-name: galaxyRotate;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-        }
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
     }
-    
+
     .modal-wrapper {
         height: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background: var(--white);
-        flex:1;
-    
-    
+        flex: 1;
+        padding: 5rem;
+
+
         .modal {
-            width: 80%;
-            //max-width: 500px;
-            height: fit-content;
+            width: 100%;
+            height: 100%;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            padding: 15px;
-    
-            form {
-                padding: 20px;
+            // padding: 15px;
+
+            figure {
                 width: 100%;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    max-width: 13rem;
+                    transition: filter 1s;
+                    filter: brightness(20%);
+                }
+            }
+
+            form {
+                // padding: 20px;
+                width: 80%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 gap: 25px;
-    
-                span {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    // justify-content: space-between;
+                flex:1;
+
+                h1 {
                     width: 100%;
-                    gap: 20px;
-                    line-height: 0;
-    
-                    input {
-                        width: 80%;
-                        background: #FEFEFE;
-                        border-radius: 5PX;
-                        outline: none;
-                        border: none;
-                        border-bottom: 1px solid var(--black);
-                        padding: 5px;
+                    text-align: center;
+                }
+
+
+                input {
+                    width: 100%;
+                    background: inherit;
+                    // border-radius: .5rem;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid var(--black);
+                    padding: 5px 0;
+                    transition: padding .1s ease;
+                    color: var(--black);
+
+                    &:focus {
+                        padding: 6px;
                     }
                 }
-    
+
+                button {
+                    margin-top: 2rem;
+                    width: 80%;
+                    height: 4rem;
+                    border: none;
+                    outline: none;
+                    border-radius: .5rem;
+                    background: var(--button-color);
+
+                }
+
+
             }
         }
     }
 }
 
+
+@media only screen and (min-width: 768px) {
+    main {
+
+        .image {
+            position: initial;
+            width: 100%;
+            margin: 0;
+            overflow: initial;
+            clip: none;
+            white-space: none;
+            border-width: initial;
+
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+
+            img {
+                width: 80%;
+                transform: rotate(0);
+                animation-name: galaxyFloat;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+        }
+
+
+        .modal-wrapper .modal form {
+            h1 {
+                text-align: left;
+            }
+        }
+
+        .modal-wrapper .modal figure {
+            justify-content: flex-start;
+        }
+    }
+}
+
+
 @keyframes galaxyFloat {
-    0%{
+    0% {
         transform: translateY(50px);
     }
 
-    50%{
+    50% {
         transform: translateY(-50px);
     }
 
@@ -87,16 +156,3 @@ main {
 
     }
 }
-
-@keyframes galaxyRotate {
-    0%{
-        transform: rotate(0);
-    }
-
-
-    100% {
-        transform: rotate(360deg);
-
-    }
-}
-

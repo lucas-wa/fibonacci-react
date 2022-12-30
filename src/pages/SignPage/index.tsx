@@ -30,11 +30,9 @@ export function SignPage() {
 
             <div className="SignPageContainer">
 
-                <Header />
 
                 <SignMain/>
 
-                <Footer />
 
             </div>
 

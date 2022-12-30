@@ -10,6 +10,7 @@
   --blue-medium: #a1c4fd;
   --blue-strong: #04133d;
   --background: linear-gradient(#a1c4fd, #c2e9fb);
+  --button-color:  #a1c4fd;
   --background-dark: linear-gradient(#0e0e0e, #0e0e0e);
 }
 
@@ -44,7 +45,7 @@ body, input, button, textarea{
   border-width: 0;
 }
 
-.darkmode#root {
+#root.darkmode {
   --white: #0e0e0e;
   --black: #f8f8f8;
   --blue-light: #c2e9fb;
