@@ -17,11 +17,19 @@ export function SignMain() {
     async function handleSubmit(e: any) {
         e.preventDefault()
 
-        // const res = await api.post("/createUsers", {
-        //     email: email,
-        //     name: name,
-        //     password: password
-        // })
+        const res = await api.post("/createUsers", {
+            email: email,
+            name: name,
+            password: password
+        })
+        .catch(
+            error => {
+                const pError:any = document.querySelector(".error")
+                pError.innerHTML = error.response.data.error
+            }
+        )
+
+        // console.log(res)
 
 
         const inputs: any = document.querySelectorAll("main .modal-wrapper .modal form input")
@@ -57,6 +65,8 @@ export function SignMain() {
                     <form action="#" onSubmit={handleSubmit}>
 
                         <h1>Cadastro</h1>
+
+                        <p className="error" style={{"color":"red"}}></p>
 
                         <input
                         required 

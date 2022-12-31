@@ -1,12 +1,42 @@
 import galaxy from "../../assets/images/galaxy.svg";
 import './style.scss'
 import logo from "../../assets/images/logo.png"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Contexts } from "../../contexts/Contexts";
+import { api } from "../../lib/api";
 
 export function LoginMain() {
 
     const { theme, setTheme } = useContext(Contexts)
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    async function handleSubmit(e: any) {
+        e.preventDefault()
+
+        const res = await api.post("/authenticateUser", {
+            email: email,
+            password: password
+        })
+        .catch(
+            error => {
+                const pError:any = document.querySelector(".error")
+                console.log(error)
+                pError.innerHTML = error.response.data.error
+            }
+        )
+
+
+
+
+        const inputs: any = document.querySelectorAll("main .modal-wrapper .modal form input")
+
+        for(let input of inputs){
+            input.value = ""
+        }
+    }
+
 
 
     return (
@@ -30,13 +60,29 @@ export function LoginMain() {
                 </figure>
 
 
-                    <form action="#">
+                    <form action="#" onSubmit={handleSubmit}>
                     
-                    <h1>Entrar</h1>
-                    
-                        <input type="text" name="" id="user" placeholder='Digite seu usuário' />
+                        <h1>Entrar</h1>
 
-                        <input type="password" name="" id="password" placeholder='Digite sua senha' />
+                        <p className="error" style={{"color":"red"}}></p>
+                    
+                        <input 
+                        type="text" 
+                        name="" 
+                        id="user" 
+                        placeholder='Digite seu usuário' 
+                        onChange={e => setEmail(e.target.value)}
+                        required
+                        />
+
+                        <input 
+                        type="password" 
+                        name="" 
+                        id="password" 
+                        placeholder='Digite sua senha'
+                        onChange={e => setPassword(e.target.value)}
+                        required
+                        />
 
                         <button type="submit">Entrar</button>
                         
