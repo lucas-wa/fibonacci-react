@@ -17,14 +17,14 @@ export function SignMain() {
     async function handleSubmit(e: any) {
         e.preventDefault()
 
-        const res = await api.post("/createUsers", {
-            email: email,
-            name: name,
-            password: password
-        })
+        // const res = await api.post("/createUsers", {
+        //     email: email,
+        //     name: name,
+        //     password: password
+        // })
 
 
-        const inputs = document.querySelectorAll("main .modal-wrapper .modal form input")
+        const inputs: any = document.querySelectorAll("main .modal-wrapper .modal form input")
 
         for(let input of inputs){
             input.value = ""
