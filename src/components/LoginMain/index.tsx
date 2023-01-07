@@ -4,8 +4,11 @@ import logo from "../../assets/images/logo.png"
 import { useContext, useState } from "react";
 import { Contexts } from "../../contexts/Contexts";
 import { api } from "../../lib/api";
+import {useNavigate} from "react-router-dom"
 
 export function LoginMain() {
+
+    const navigate = useNavigate();
 
     const { theme, setTheme } = useContext(Contexts)
 
@@ -27,14 +30,13 @@ export function LoginMain() {
             }
         )
 
-
-
-
         const inputs: any = document.querySelectorAll("main .modal-wrapper .modal form input")
 
         for(let input of inputs){
             input.value = ""
         }
+
+        navigate(res.data.redirectUrl)
     }
 
 

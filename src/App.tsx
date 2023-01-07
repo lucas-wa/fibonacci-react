@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import { Contacts } from "./pages/Contacts"
 import { SignPage } from "./pages/SignPage"
 import { LoginPage } from "./pages/LoginPage"
+import { Dashboard } from "./pages/Dashboard"
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/contacts" element={<Contacts/>} />
         <Route path="/sign" element={<SignPage/>} />
         <Route path="/login" element={<LoginPage/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
       </Routes>
     </Contexts.Provider>
   )

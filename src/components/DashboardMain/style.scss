@@ -1,0 +1,36 @@
+.DashBoardMain {
+    flex:1;
+    background: rgba(0,0,0, .2);
+    color: var(--black);
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+
+    padding-top: 12.6rem;
+
+
+    section {
+      text-align: left;
+      max-width: 90%;
+      margin: 4.5rem 0;
+
+      p{
+        margin-top: 3rem;
+      }
+    }
+  }
+
+
+  @media only screen and (min-width: 768px){
+    .DashBoardMain {
+      padding-top: 0;
+    }
+  }
+
+
+
+
+  
