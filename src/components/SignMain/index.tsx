@@ -4,9 +4,12 @@ import logo from "../../assets/images/logo.png"
 import { useContext, useState } from "react";
 import { Contexts } from "../../contexts/Contexts";
 import { api } from "../../lib/api";
+import {useNavigate} from "react-router-dom"
 
 
 export function SignMain() {
+
+    const navigate = useNavigate();
 
     const { theme, setTheme } = useContext(Contexts)
 
@@ -37,6 +40,8 @@ export function SignMain() {
         for(let input of inputs){
             input.value = ""
         }
+
+        navigate(res.data.redirectUrl)
     }
 
 
