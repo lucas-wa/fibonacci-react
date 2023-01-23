@@ -10,7 +10,7 @@ export function LoginMain() {
 
     const navigate = useNavigate();
 
-    const { theme, setTheme } = useContext(Contexts)
+    const { theme, setTheme, user, setUser } = useContext(Contexts)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -18,7 +18,7 @@ export function LoginMain() {
     async function handleSubmit(e: any) {
         e.preventDefault()
 
-        const res = await api.post("/authenticateUser", {
+        const res: any = await api.post("/authenticateUser", {
             email: email,
             password: password
         })
@@ -36,6 +36,7 @@ export function LoginMain() {
             input.value = ""
         }
 
+        setUser({isLogged: true})
         navigate(res.data.redirectUrl)
     }
 

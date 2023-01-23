@@ -20,7 +20,7 @@ export function SignMain() {
     async function handleSubmit(e: any) {
         e.preventDefault()
 
-        const res = await api.post("/createUsers", {
+        const res: any = await api.post("/createUsers", {
             email: email,
             name: name,
             password: password

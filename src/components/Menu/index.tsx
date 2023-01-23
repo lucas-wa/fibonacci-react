@@ -7,7 +7,7 @@ import logout from "../../assets/images/logout.svg";
 import sign from "../../assets/images/sign.svg";
 import "./style.scss";
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Contexts } from "../../contexts/Contexts";
 
 interface MenuProps {
@@ -16,46 +16,10 @@ interface MenuProps {
 
 export function Menu({ handleTheme }: MenuProps) {
 
-  const [user, setUser] = useState(undefined);
-
-  const { theme, setTheme } = useContext(Contexts)
+  const navigate = useNavigate();
 
 
-
-  // useEffect(() => {
-  //   const button: any = document.querySelector("#menuContent #labelDarkmode span")
-  //   const spans: any = document.querySelectorAll("#menuContent #label-menu #nav-icon3 span")
-  //   const lis: any = document.querySelectorAll("#menuContent li .icons, #menuContent li a")
-
-  //   if (theme == "dark") {
-  //     button.style.marginLeft = "25px"
-
-  //     for(let span of spans){
-  //       span.style.backgroundColor = "rgba(255, 255, 255, 0.7)"
-  //     }
-
-  //     for(let li of lis){
-  //       li.style.filter = "brightness(100%)"
-  //     }
-
-      
-
-  //   } else {
-  //     button.style.marginLeft = "0"
-
-  //     for(let span of spans){
-  //       span.style.backgroundColor = "rgba(0, 0, 0, 0.7)"
-  //     }
-
-  //     // for(let li of lis){
-  //     //   li.style.filter = "brightness(100%)"
-  //     // }
-
-  //   }
-  // }, [theme])
-
-
-
+  const { user, setUser } = useContext(Contexts)
 
   function handleMenu() {
     const nav = document.querySelector(".menuNavigation");
@@ -109,7 +73,7 @@ export function Menu({ handleTheme }: MenuProps) {
             </Link>
           </li>
           <li>
-            <Link to="/contacts">
+            <Link to="/contacts" >
               <img src={contact} alt="contact" className="icons" />
               <span>Contato</span>
             </Link>
@@ -118,15 +82,18 @@ export function Menu({ handleTheme }: MenuProps) {
           {
             user ?
               (
-                <li>
-                  <Link to="#">
+                <li >
+                  <Link to="/" onClick={() => {
+                    setUser(false)
+                  }
+                  }
+                    >
                     <img src={logout} alt="contact" className="icons" />
                     <span>Logout</span>
                   </Link>
                 </li>
               )
               :
-
               (<>
                 <li>
                   <Link to="/sign">
